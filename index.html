@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>街の八百屋さん</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+  <meta name="author" content="ヨシダタクマ">
+  <meta name="description" content="架空の商品サイト">
+  <link rel="stylesheet" href="https://use.typekit.net/fyi4asj.css">
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'bar3bgj',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('a[href^=#]').click(function() {
+        var speed = 400;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' :href);
+        var position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
+</head>
+<head>
+  <style>
+    *{border:px solid red;margin:0;padding:0;box-sizing:border-box;}
+  </style>
+  <style>
+    img{pointer-events:none;vertical-align:bottom;}
+    body{line-height:1.7;letter-spacing:0.05em;color:#333;}
+    ul{list-style:none;}
+    a{font-size:14px;text-decoration:none;color:inherit;}
+  </style>
+  <style>
+    header{width:100%;height:80px;background-color:#fff;position:fixed;z-index:999999;}
+    .header{width:80%;margin:0 auto;height:80px;background-color:#fff;display:flex;justify-content:space-between;align-items:center;}
+    .logo{width:160px;height:80px;margin:0 27.5px;}
+    .logo a{width:100%;height:100%;display:flex;justify-content:center;align-items:center;}
+    .logo img{width:100%;object-fit:cover;}
+    .list ul{display:flex;}
+    .list a{display:flex;justify-content:center;align-items:center;width:auto;height:40px;padding:0 10px;}
+    .list-a:hover{color:rgb(0,0,0,0.5);transition:0.3s;}
+    .review{color:#8EC31E;}
+    .review:hover{color:rgb(142,195,30,0.5);transition:0.3s;}
+    .order-head{display:inline-block;background-color:#8EC31E;color:#fff;border-radius:100px;padding:0 30px!important;}
+    .order-head:hover{background-color:rgb(142,195,30,0.5);transition:0.3s;}
+    #nav-drawer{display:none;}
+    main{background-color:#fff}
+    .section{max-width:1600px;margin:0 auto;width:100%;height:auto;padding-top:80px;}
+    #section1{max-width:100%;height:/*900px*/100vh;}
+    .box-1{width:100%;height:/*900px*/100vh;position:relative;background-color:#fff;}
+    .img-1{position:absolute;top:80px;left:/*80px*/0;bottom:80px;right:/*80px*/0;}
+    .img-1 img{width:100%;height:/*740px*/100%;object-fit:cover;position:relative;}
+    .img-1::after{position:absolute;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,0.4);content:'';}
+    .block-1{position:absolute;top:/*450px*/50%;left:50%;transform:translateY(-50%) translateX(-50%);-webkit- transform:translateY(-50%) translateX(-50%);text-align:center;width:100%;}
+    .block-1 h1{font-size:60px;font-weight:900;color:#fff;text-align:center;font-weight:lighter;}
+    .block-1 a{display:inline-block;font-size:18px;line-height:60px;padding:0 60px;background-color:#8EC31E;color:#fff;border-radius:150px;border:3px solid #8EC31E;}
+    .block-1 a:hover{background-color:rgb(142,195,30,0.8);transition:0.3s;}
+    #section2{width:100%;height:auto;}
+    .box-2{width:84%;margin:0 auto;display:flex;justify-content:space-between;padding:50px 0}
+    .block-2{width:100%;}
+    .box-2 h2{width:100%;font-size:38px;padding-left:50px;}
+    .block-2{width:50%;font-weight:lighter;}
+    #section3{width:100%;height:auto;padding-bottom:80px;}
+    .box-3{width:92%;margin:0 auto;display:flex;}
+    .block-3{width:100%;background-color:#fff;border:1px solid #fff;}
+    .block-3:hover{transform:scale(1.1, 1.1);z-index:100;box-shadow:0 54px 44px -12px rgba(0,5,30,.04);transition:0.2s;color:#64ccbf;}
+    .block-3 img{width:100%;height:300px;object-fit:cover;object-position:center;}
+    .block-3 img:hover{background-color:red;z-index:101;opacity:0.2;}
+    .text-3{padding:30px;height:auto;height:-webkit-fill-available;}
+    .text-3 h2{font-size:20px;}
+    .text-3 p{font-size:14px;color:#adb6bf;}
+    #section4{width:100%;height:auto;padding-bottom:80px;}
+    .box-4{width:84%;margin:0 auto;height:auto;display:flex;justify-content:space-between;align-items:center;}
+    .box-4 img{width:30%;height:550px;object-fit:cover;object-position:center;}
+    .block-4{width:50%;}
+    .color{color:#286bc1;}
+    .block-4 p{margin-bottom:20px;font-size:16px}
+    .block-4 h2{font-size:30px;margin-bottom:60px;}
+    .block-4 a{display:inline-block;margin-top:50px;font-size:16px;font-weight:bold;color:#64CCBF;border-bottom:1px solid #64CCBF;}
+    #section5{width:100%;height:auto;padding-bottom:80px;}
+    .box-5{width:92%;margin:0 auto;display:flex;background-color:#fff;}
+    .block-5{width:33.333%;background-color:#fff;border:1px solid #fff;display:flex;flex-direction:column;}
+    .block-5:hover{transform:scale(1.1, 1.1);z-index:100;box-shadow:0 54px 44px -12px rgba(0,5,30,.04);transition:0.2s;color:#64ccbf;}
+    .block-5 img{width:100%;height:200px;object-fit:cover;object-position:center;}
+    .text-5{padding:30px;height:auto;height:-webkit-fill-available;}
+    .block-5 h2{font-size:20px;padding-bottom:12px;}
+    .block-5 p{font-size:14px;}
+    .block-5 a{display:none;}
+    #section6{width:100%;height:400px;padding-bottom:80px;background-color:#8EC31E;}
+    .box-6{width:84%;margin:0 auto;height:100%;display:flex;justify-content:space-between;align-items:center;color:#fff;}
+    .block-6{padding:10px 0;}
+    .block-6 h2{font-size:58px;}
+    .block-6 p{font-size:14px;}
+    .flexbox-6{display:flex;height:100%;align-items:center;}
+    .telblock-6{width:300px;height:auto;text-align:center;padding:10px 0;}
+    .telblock-6 p{font-size:14px;}
+    .telblock-6 a{font-size:27px;width:100%;display:inline-block;}
+    .order-6{padding:10px 0;}
+    .order-6 a{font-size:16px;width:auto;line-height:50px;display:inline-flex;justify-content:center;align-items:center;border-radius:100px;background-color:#fff;color:#8EC31E;padding:0 60px;border:1px solid transparent;}
+    .order-6 a:hover{border:1px solid #fff;color:#fff;background-color:#8EC31E;}
+    #section7{width:100%;height:500px;padding-top:80px;}
+    .box-7{width:84%;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;}
+    .block-7-1{width:auto;}
+    .block-7-1 img{width:200px;margin-bottom:20px;}
+    .block-7-1 h3{font-size:14px;}
+    dl{display:flex;font-size:12px;}
+    dt{font-weight:bold;}
+    .block-7-1 p{font-size:12px;}
+    .block-7-2{padding:20px 0;}
+    .block-7-2 ul{width:auto;display:inline-flex;}
+    .block-7-2 a{display:block;margin:5px;padding:5px;border-bottom:1px solid transparent;}
+    .block-7-2 a:hover{border-bottom:1px solid;transition:0.3s;}
+    footer{width:100%;height:80px;}
+    .footer{width:100%;height:80px;display:flex;justify-content:space-around;align-items:center;}
+    .footer-list ul{display:flex;}
+    .footer-list a{padding:0 10px;font-size:12px;}
+    .footer p{padding:0 10px;font-size:12px;}
+  </style>
+  <!--レスポンシブ-->
+  <style>
+    /*  タブレット  */
+    @media only screen and (max-width:956px) {
+      .header{width:100%;}
+      .box-2{width:90%;margin:0 auto;display:inherit;padding:0}
+      .box-2 h2{width:100%;font-size:20px;padding-left:0px;}
+      .block-2{width:100%;padding-right:0px;}
+      .box-3{width:100%;}
+      .block-3 img{width:100%;height:200px;object-fit:cover;object-position:center;}
+      .box-4{width:90%;display:grid;padding-bottom:100px;}
+      .box-4 img{order:2;width:100%;height:150px;object-fit:cover;object-position:center;}
+      .block-4{order:1;width:100%;}
+      .block-4 p{margin-bottom:10px;font-size:14px}
+      .block-4 h2{font-size:18px;margin-bottom:30px;}
+      .block-4 a{margin:10px 0;}
+      #section6{height:auto;}
+      .box-6{width:90%;display:inherit;text-align:center;}
+      .block-6 h2{font-size:22px;}
+      .flexbox-6{display:inherit;}
+      .telblock-6{width:100%;}
+      .telblock-6 a{font-size:20px;}
+      .box-7{width:90%;display:inherit;}
+      .block-7-2 ul{display:grid;}
+      .block-7-2 a{font-size:12px;margin:5px 0;padding:5px 0;display:block;width:fit-content;}
+      #nav-drawer{display:inherit;padding:30.5px 27.5px;}
+      .nav-unshown,.list{display:none;}
+      #nav-open {display:inline-block;width:25px;height:19px;vertical-align:middle;}
+      #nav-open span, #nav-open span:before, #nav-open span:after {position:absolute;height:3px;width:25px;border-radius:3px;background:#555;display:block;content:'';cursor:pointer;}
+      #nav-open span:before {bottom:-8px;}
+      #nav-open span:after {bottom:-16px;}
+      #nav-close {display:none;position:fixed;z-index:-3;top:0;left:0;width:100%;height:100%;opacity:0;transition:.5s ease-in-out;}
+      #nav-content {overflow:auto;position:fixed;top:0;left:0;z-index:-1;width:100%;height:340px;background:#fff;transition:.5s ease-in-out;-webkit-transform:translateY(-105%);transform:translateY(-105%);box-shadow:0 0 20px rgb(0,0,0,0.05);}
+      #nav-input:checked ~ #nav-close {display:block;opacity:0}
+      #nav-input:checked ~ #nav-content {-webkit-transform:translateY(80px);transform:translateY(80px);}
+      #nav-content ul{text-align:center;z-index:9999}
+      #nav-content a{line-height:50px;}
+      #nav-content a:hover{opacity:0.5;}
+      .order2{display:inline-block;background-color:#8EC31E;color:#fff;border-radius:100px;padding:0 30px!important;}
+    }
+      /*  スマホ  */
+    @media only screen and (max-width:600px) {
+      header{background-color:gold;}
+      .block-1 h1{font-size:32px;}
+      .block-1 a {display: inline-block;font-size: 16px;line-height: .8;padding: 10px 30px;background-color: #8EC31E;color: #fff;border-radius:150px;}
+      .box-3{width:auto;margin-left:28px;margin-right:28px;flex-wrap: wrap;}
+      .block-3{width:50%;}
+      .block-3 img{height:180px;}
+      .text-3{padding:10px;height:auto;height:-webkit-fill-available;}
+      .text-3 h2{font-size:18px;}
+      .box-4{width:90%;display:grid;padding-bottom:100px;}
+      .box-4 img{order:2;width:100%;height:150px;object-fit:cover;object-position:center;}
+      .block-4{order:1;width:100%;}
+      .block-4 p{margin-bottom:10px;font-size:14px}
+      .block-4 h2{font-size:18px;margin-bottom:30px;}
+      .block-4 a{margin:10px 0;}
+      .box-5{width:90%;display:inherit;}
+      .block-5{width:100%;margin:20px 0;}
+      .block-5:hover{transform:scale(1.025, 1.025);box-shadow:none;transition:0.2s;color:#64ccbf;}
+      .block-5 img{height:150px;}
+      .text-5{padding:20px 0;height:auto;height:-webkit-fill-available;}
+      .block-5 a{font-size:14px;display:inline-block;color:#64CCBF;border-bottom:1px solid #64CCBF;}
+      #section6{height:auto;}
+      .box-6{width:90%;display:inherit;text-align:center;}
+      .block-6 h2{font-size:22px;}
+      .flexbox-6{display:inherit;}
+      .telblock-6{width:100%;}
+      .telblock-6 a{font-size:20px;}
+      .order-6 a:hover{border:1px solid #fff;color:#fff;background-color:#8EC31E;}
+      .box-7{width:90%;display:inherit;}
+      .block-7-2 ul{display:grid;}
+      .block-7-2 a{font-size:12px;margin:5px 0;padding:0;display:block;width:fit-content;}
+      .footer{display:inherit;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header">
+      <div class="logo">
+        <a href="#"><img src="yaoya.png" alt=""></a>
+      </div>
+      <div class="list">
+        <ul>
+          <a href="#section2" class="list-a"><li>企業概念</li></a>
+          <a href="#section4" class="list-a"><li>協力農家</li></a>
+          <a href="#section5" class="list-a"><li>よくある質問</li></a>
+          <a href="#section5" class="list-a"><li>会社案内</li></a>
+          <a href="#section5" class="review"><li>採用情報</li></a>
+          <a href="#section" class="order-head"><li><nobr>購入する</nobr></li></a>
+        </ul>
+      </div>
+      <div id="nav-drawer">
+        <input id="nav-input" type="checkbox" class="nav-unshown">
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+        <div id="nav-content">
+          <ul>
+            <a href="#section2" class="list-a"><li>概念</li></a>
+            <a href="#section4" class="list-a"><li>協力農家</li></a>
+            <a href="#section5" class="list-a"><li>よくある質問</li></a>
+            <a href="#section5" class="list-a"><li>会社案内</li></a>
+            <a href="#section5" class="review"><li>採用情報</li></a>
+            <a href="#section" class="order-head"><li><nobr>購入する</nobr></li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="section1">
+      <div class="box-1">
+        <div class="img-1">
+          <img src="1.jpg" alt="">
+        </div>
+        <div class="block-1">
+          <h1 style="font-family:heisei-maru-gothic-std,sans-serif;">毎日の食卓に幸せを。</h1>
+          <p><a href="#">購入する</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="box-2">
+        <div class="block-2">
+          <p class="color">Corporate concept / 企業概念</p>
+          <h2>広大なネットワークで<br>全国の農家さんから<br>様々な野菜をお取り寄せ。</h2>
+        </div>
+        <div class="block-2">
+          <p>私たちは、おいしい野菜を農家さんから直接お届けする八百屋です。</p>
+          <p>日本各地から旬の野菜を取り寄せています。</p>
+          <p>おいしい野菜で毎日の食卓に幸せを運びます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section3">
+      <div class="box-3">
+        <div class="block-3"><img src="2.jpg" alt=""><div class="text-3"><h2>こだわり1</h2><p>Commitment1</p></div></div>
+        <div class="block-3"><img src="3.jpg" alt=""><div class="text-3"><h2>こだわり2</h2><p>Commitment2</p></div></div>
+        <div class="block-3"><img src="4.jpg" alt=""><div class="text-3"><h2>こだわり3</h2><p>Commitment3</p></div></div>
+        <div class="block-3"><img src="5.jpg" alt=""><div class="text-3"><h2>こだわり4</h2><p>Commitment4</p></div></div>
+      </div>
+    </div>
+    <div class="section" id="section4">
+      <div class="box-4">
+        <img src="6.jpg" alt="">
+        <div class="block-4">
+          <p class="color">Partner Farmer / 協力農家の紹介</p>
+          <h2>野菜の鮮度を維持するため<br>協力農家さんと連携し<br>いち早くお客様のもとへお届け。</h2>
+          <p>野菜の鮮度の維持は協力農家さんによって支えられています。</p>
+          <p>信頼関係が結ばれた農家さんたちとのコミュニケーションによって品質は保たれ、<br>難易度の高い要望にも柔軟に対応することが可能です。</p>
+          <a href="#">協力工場の紹介</a>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section5">
+      <div class="box-5">
+        <div class="block-5"><img src="7.jpg" alt=""><div class="text-5"><h2>よくある質問</h2><p>お客様からいただくご質問をまとめました。掲載されているもの以外にもご質問がございましたら、お気軽にお問い合わせください。</p><a href="#">General G&A</a></div></div>
+        <div class="block-5"><img src="8.jpg" alt=""><div class="text-5"><h2>会社案内</h2><p>滝研の基本的な情報（会社概要、アクセス）、代表メッセージ、創業からこれまでの歩みをご紹介します。</p><a href="#">Company</a></div></div>
+        <div class="block-5"><img src="9.jpg" alt=""><div class="text-5"><h2>採用情報</h2><p>創業半世紀以上が経ち、お客様の信頼も得て業績は好調。ご依頼の増加に伴い、共に働く仲間を募集しております。</p><a href="#">Career</a></div></div>
+      </div>
+    </div>
+    <div class="section" id="section6">
+      <div class="box-6">
+        <div class="block-6">
+          <h2>Contact</h2>
+          <p>ご質問・お見積りのご要望がありましたら<br>お気軽にご相談ください。</p>
+        </div>
+        <div class="flexbox-6">
+            <div class="telblock-6">
+              <a href="tel:00-0000-0000">Tel.00-0000-0000</a>
+              <p>受付時間 10:00-17:00 土日祝休み</p>
+            </div>
+            <div class="order-6">
+              <a href="#">今すぐ注文</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" id="section7">
+      <div class="box-7">
+        <div class="block-7-1">
+          <img src="yaoya.png" alt="">
+          <h3>株式会社やおや</h3>
+          <dl><dt>本社</dt><dd>〒000-0000 東京都〇〇区〇〇1-2-3</dd></dl>
+          <dl><dt>〇〇第2ビル</dt><dd>〒000-0000 東京都〇〇区〇〇3-5-1</dd></dl>
+          <p>Tel.00-0000-0000 Fax.00-0000-0000</p>
+        </div>
+        <div class="block-7-2">
+          <ul>
+            <a href="#section2"><li>商品概要</li></a>
+            <a href="#section4"><li>協力農家</li></a>
+            <a href="#section5"><li>よくある質問</li></a>
+            <a href="#section5"><li>会社案内</li></a>
+            <a href="#section5" class="review"><li>採用情報</li></a>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="section">
+    <div class="footer">
+      <div class="footer-list">
+        <ul>
+          <li><a href="#">利用規約</a></li>
+          <li><a href="#">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+      <p>&copy;2020 Yaoya Company. <nobr>all rights reserved.</nobr></p>
+    </div>
+  </footer>
+</body>
+</html>
